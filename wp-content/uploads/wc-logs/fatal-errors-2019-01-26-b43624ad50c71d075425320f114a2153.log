@@ -1,0 +1,40 @@
+2019-01-26T10:56:34+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC) in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 29
+
+2019-01-26T10:56:42+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC) in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 29
+
+2019-01-26T10:58:23+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC) in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 29
+
+2019-01-26T10:58:47+00:00 CRITICAL syntax error, unexpected 'public' (T_PUBLIC) in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 29
+
+2019-01-26T10:59:03+00:00 CRITICAL syntax error, unexpected '}', expecting ',' or ';' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 46
+
+2019-01-26T11:47:03+00:00 CRITICAL syntax error, unexpected ',', expecting ']' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 53
+
+2019-01-26T11:47:15+00:00 CRITICAL syntax error, unexpected ',', expecting ']' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 53
+
+2019-01-26T11:48:03+00:00 CRITICAL syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 48
+
+2019-01-26T11:48:53+00:00 CRITICAL syntax error, unexpected ',', expecting ']' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 54
+
+2019-01-26T11:50:03+00:00 CRITICAL syntax error, unexpected ',', expecting ']' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 54
+
+2019-01-26T11:50:51+00:00 CRITICAL Call to a member function insert() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 50
+
+2019-01-26T13:04:31+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 45
+
+2019-01-26T13:04:32+00:00 CRITICAL syntax error, unexpected 'echo' (T_ECHO) in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 45
+
+2019-01-26T13:04:42+00:00 CRITICAL Call to a member function get_results() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 42
+
+2019-01-26T13:05:02+00:00 CRITICAL Call to a member function get_results() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 42
+
+2019-01-26T13:06:34+00:00 CRITICAL Cannot use object of type stdClass as array in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 49
+
+2019-01-26T13:07:24+00:00 CRITICAL Cannot use object of type stdClass as array in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 49
+
+2019-01-26T13:11:27+00:00 CRITICAL syntax error, unexpected 'foreach' (T_FOREACH), expecting ',' or ';' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 48
+
+2019-01-26T13:14:14+00:00 CRITICAL syntax error, unexpected 'foreach' (T_FOREACH), expecting ',' or ';' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 49
+
+2019-01-26T13:14:15+00:00 CRITICAL syntax error, unexpected 'foreach' (T_FOREACH), expecting ',' or ';' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 49
+

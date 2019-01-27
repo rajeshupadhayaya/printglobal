@@ -1,0 +1,387 @@
+/*
+Theme Name: Oceanwp Child
+Template: oceanwp
+*/
+html {
+    font-family: Open Sans,"Open Sans", "Droid Sans", Roboto, "Segoe UI", "Trebuchet MS", Arial, Helvetica, "Free Sans", "Liberation Sans", Verdana, sans-serif,sans-serif;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+body {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    background-color: #eeeff2;
+}
+
+.page-header{
+	display: none;
+}
+
+.single .entry-content{
+	padding: 50px;
+	background-color: #fff !important;
+}
+/*
+#site-navigation-wrap{
+	text-align: right;
+	background-color: #d1e6ea !important;
+}
+
+#site-navigation-wrap ul li a:hover{
+	text-decoration: none;
+	color: #ffff !important;
+}
+
+#site-navigation-wrap ul li :hover{
+	background-color: #50c5dc;
+	text-decoration: none;
+	color: #ffff;
+}*/
+
+.upload-form{
+	
+	margin: auto;
+  	width: 50%;
+  	padding: 30px 0;
+
+}
+.upload-btn{
+	width: 100%;
+}
+
+.form-input{
+	margin: 10px 0 10px 0 !important;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.form-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.hidden{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+.progress {
+  margin: 5px 0 3px;
+  background: #333;
+  overflow: hidden;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  box-shadow: 1px 1px 1px #777;
+  -moz-box-shadow: 1px 1px 1px #777;
+  -webkit-box-shadow: 1px 1px 1px #777;
+}
+.progress > span {
+  display: block;
+  height: 20px;
+  width: 0%;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.gradient > span {
+  box-shadow: 0 5px 5px rgba(255,255,255,0.6) inset, 0 -5px 7px rgba(0, 0, 0, 0.4) inset;
+  -moz-box-shadow: 0 5px 5px rgba(255,255,255,0.6) inset, 0 -5px 7px rgba(0, 0, 0, 0.4) inset;
+  -webkit-box-shadow: 0 5px 5px rgba(255,255,255,0.6) inset, 0 -5px 7px rgba(0, 0, 0, 0.4) inset;
+  filter: progid:DXImageTransform.Microsoft.gradient(
+    startColorstr='#33ffffff',
+    endColorstr='#33000000',
+    GradientType=0 );
+}
+.gloss > span {
+  background-image: -moz-linear-gradient(top,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255,255,255,0.1) 45%,
+    rgba(0,0,0,0.2) 55%,
+    rgba(0,0,0,0.1) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom,
+    color-stop(0%,rgba(255,255,255,0.2)),
+    color-stop(45%,rgba(255,255,255,0.1)),
+    color-stop(55%,rgba(0,0,0,0.2)),
+    color-stop(100%,rgba(0,0,0,0.1)));
+  background-image: -webkit-linear-gradient(top,
+    rgba(255,255,255,0.5) 0%,
+    rgba(255,255,255,0.1) 45%,
+    rgba(0,0,0,0.2) 55%,
+    rgba(0,0,0,0.1) 100%);
+  background-image: -o-linear-gradient(top,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255,255,255,0.1) 45%,
+    rgba(0,0,0,0.2) 55%,
+    rgba(0,0,0,0.1) 100%);
+  background-image: -ms-linear-gradient(top,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255,255,255,0.1) 45%,
+    rgba(0,0,0,0.2) 55%,
+    rgba(0,0,0,0.1) 100%);
+  background-image: linear-gradient(to bottom,
+    rgba(255,255,255,0.2) 0%,
+    rgba(255,255,255,0.1) 45%,
+    rgba(0,0,0,0.2) 55%,
+    rgba(0,0,0,0.1) 100%);
+}
+.stripe > span {
+  background-size: 30px 30px;
+  background-image: -moz-linear-gradient(-45deg,
+    rgba(255,255,255,0.15) 0%,
+    rgba(255,255,255,0.15) 25%,
+    rgba(255,255,255,0) 25%,
+    rgba(255,255,255,0) 50%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.15) 75%,
+    rgba(255,255,255,0) 75%,
+    rgba(255,255,255,0) 100%);
+  background-image: -webkit-gradient(linear, left top, right bottom,
+    color-stop(0%,rgba(255,255,255,0.2)),
+    color-stop(25%,rgba(255,255,255,0.2)),
+    color-stop(25%,rgba(255,255,255,0)),
+    color-stop(50%,rgba(255,255,255,0)),
+    color-stop(50%,rgba(255,255,255,0.2)),
+    color-stop(75%,rgba(255,255,255,0.2)),
+    color-stop(75%,rgba(255,255,255,0)),
+    color-stop(100%,rgba(255,255,255,0)));
+  background-image: -webkit-linear-gradient(-45deg,
+    rgba(255,255,255,0.3) 0%,
+    rgba(255,255,255,0.3) 25%,
+    rgba(255,255,255,0) 25%,
+    rgba(255,255,255,0) 50%,
+    rgba(255,255,255,0.3) 50%,
+    rgba(255,255,255,0.3) 75%,
+    rgba(255,255,255,0) 75%,
+    rgba(255,255,255,0) 100%);
+  background-image: -o-linear-gradient(-45deg,
+    rgba(255,255,255,0.15) 0%,
+    rgba(255,255,255,0.15) 25%,
+    rgba(255,255,255,0) 25%,
+    rgba(255,255,255,0) 50%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.15) 75%,
+    rgba(255,255,255,0) 75%,
+    rgba(255,255,255,0) 100%);
+  background-image: -ms-linear-gradient(-45deg,
+    rgba(255,255,255,0.15) 0%,
+    rgba(255,255,255,0.15) 25%,
+    rgba(255,255,255,0) 25%,
+    rgba(255,255,255,0) 50%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.15) 75%,
+    rgba(255,255,255,0) 75%,
+    rgba(255,255,255,0) 100%);
+  background-image: linear-gradient(135deg,
+    rgba(255,255,255,0.15) 0%,
+    rgba(255,255,255,0.15) 25%,
+    rgba(255,255,255,0) 25%,
+    rgba(255,255,255,0) 50%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0.15) 75%,
+    rgba(255,255,255,0) 75%,
+    rgba(255,255,255,0) 100%);
+}
+.animate {
+  animation: progress 2s linear infinite;
+  -moz-animation: progress 2s linear infinite;
+  -webkit-animation: progress 2s linear infinite;
+  -ms-animation: progress 2s linear infinite;
+  -o-animation: progress 2s linear infinite;
+}
+
+@-webkit-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+
+@-moz-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+
+@-ms-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+
+@-o-keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+
+@keyframes progress {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -60px -60px;
+  }
+}
+
+.footer-custom-widget h3 {
+	color: #fff;
+}
+.footer-custom-widget a {
+	color: #fff;
+	text-decoration: underline dotted !important;
+}
+.banner-product-content{
+	
+	display: flex;
+    margin: 20px 0 20px 0;
+    background: #fff;
+    padding: 20px;
+}
+
+.banner-product-content div{
+	flex: 1;
+}
+
+.left-area{
+	padding-right: 30px
+}
+
+.right-area{
+	padding-left: 30px
+}
+
+.rows{
+	display: flex;
+}
+.cols{
+	flex: 1;
+}
+.banner-product-info{
+	justify-content: space-between;
+}
+
+input:not([type=range]), select, textarea {
+    box-shadow: 0 0 0 1px transparent;
+}
+
+input, select, textarea {
+    display: block;
+    width: 100% ;
+    max-width: 100% !important;
+    border: 1px solid #CCC;
+    background-color: #FFF;
+    color: #222;
+    outline-offset: 0;
+    padding: .7rem .9rem;
+    transition: .15s;
+    border-radius: 4px;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.form {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: 0 calc(-1* (1rem / 2)) 1em calc(-1* (1rem / 2));
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.form-item {
+    margin: 0 0 calc(1rem *1.5) 0;
+    padding: 0 calc(1rem / 2);
+    flex: 0 1 auto;
+    width: 100%;
+}
+
+.material-width {
+    width: 40%;
+}
+.material-height{width:40%}
+.material-scale{width:20%}
+.material-quantity{width:30%}
+.material-finish{width:70%}
+.material-action{width:100%}
+
+
+
+.buttons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+.button-action {
+    display: block;
+    padding: 0;
+    border: 0;
+    background-color: #50c5dc;
+    transition: .15s;
+    white-space: nowrap;
+    width: 100%;
+    cursor: pointer;
+}
+.button-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em .8em;
+}
+.button-icon {
+    fill: #000000;
+    width: 1.3em;
+    height: 1.3em;
+    flex: 0 0 1.3em;
+    transition: .15s;
+    margin-right: .5em;
+}
+.button-text {
+    color: #000000;
+    transition: .15s;
+    font-weight: bolder;
+    padding: .3em 0;
+}
+.buttons-flex .button {
+    flex: 1;
+    padding: 0;
+}

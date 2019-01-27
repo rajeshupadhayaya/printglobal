@@ -1,0 +1,4 @@
+2019-01-23T14:59:56+00:00 CRITICAL Cannot redeclare my_scripts_method() (previously declared in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php:18) in C:\xampp\htdocs\wp-content\themes\oceanwp\functions.php on line 63
+
+2019-01-23T14:59:57+00:00 CRITICAL Cannot redeclare my_scripts_method() (previously declared in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php:18) in C:\xampp\htdocs\wp-content\themes\oceanwp\functions.php on line 63
+
