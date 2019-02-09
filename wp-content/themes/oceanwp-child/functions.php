@@ -9,6 +9,7 @@ function oceanwp_child_enqueue_parent_style() {
 	wp_register_style('child-style', get_stylesheet_directory_uri() . '/style.css', array( 'oceanwp-style' ), $version );
 	wp_enqueue_style('child-style');
 	
+	
 }
 // Update CSS within in Admin
 add_action('admin_enqueue_scripts', 'admin_style');
@@ -23,12 +24,13 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 
 function my_scripts_method() {
 // register your script location, dependencies and version
+
    wp_register_script('custom_script',get_stylesheet_directory_uri() . '/assets/js/custom.js',array('jquery') );
    wp_localize_script( 'custom_script', 'custom_script',
             array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
  // enqueue the script
   wp_enqueue_script('custom_script');
-  }
+}
 
  //custom upload file
 add_action( 'wp_ajax_upload_file','upload_file' );
@@ -128,3 +130,17 @@ function extra_footer_widget(){
 			'after_title'	=> '</'. $heading .'>',
 		) );
 }
+
+// Replace add to cart button by a linked button to the product in Shop and archives pages
+add_filter( 'woocommerce_loop_add_to_cart_link', 'replace_loop_add_to_cart_button', 10, 2 );
+function replace_loop_add_to_cart_button( $button, $product  ) {
+    // Not needed for variable products
+    if( $product->is_type( 'variable' ) ) return $button;
+
+    // Button text here
+    $button_text = __( "View product", "woocommerce" );
+
+    return '<a class="button" href="' . $product->get_permalink() . '">' . $button_text . '</a>';
+}
+
+

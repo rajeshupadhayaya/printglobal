@@ -1,0 +1,4 @@
+2019-02-05T18:36:58+00:00 CRITICAL syntax error, unexpected 'wp_register_style' (T_STRING) in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 10
+
+2019-02-05T19:01:11+00:00 CRITICAL syntax error, unexpected 'wp_enqueue_style' (T_STRING) in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 12
+

@@ -2,27 +2,61 @@
 Theme Name: Oceanwp Child
 Template: oceanwp
 */
-html {
-    font-family: Open Sans,"Open Sans", "Droid Sans", Roboto, "Segoe UI", "Trebuchet MS", Arial, Helvetica, "Free Sans", "Liberation Sans", Verdana, sans-serif,sans-serif;
+
+/*html {
+    font-family: "MuseoSansRounded","Arial","sans-serif","Open Sans", "Droid Sans", Roboto, "Segoe UI", "Trebuchet MS", Arial, Helvetica, "Free Sans", "Liberation Sans", Verdana, sans-serif,sans-serif;
     color: #000000;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.4;
 }
-
-body {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    background-color: #eeeff2;
+*/
+#site-header{
+  padding: 0 20px 0 20px;
+  background-color: hsla(0,0%,39%,0.95);
+  box-shadow: 0px 5px 5px rgba(100, 100, 100, 0.2);
 }
 
+#site-logo-inner a, #site-navigation-wrap .dropdown-menu>li>a{
+  color: #fff;
+}
+.owp-floating-bar{
+  margin-top: 45px;
+}
 .page-header{
 	display: none;
 }
 
+.woocommerce-products-header{
+  min-height: 250px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: right;
+  background-image: url(/wp-content/uploads/2019/02/business-card-header.png);
+}
+.woocommerce .term-description {
+    float: right;
+    min-height: 80px;
+    margin-top: 20px; 
+    line-height: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    padding: 2rem 1.5rem;
+    background-color: #194c57;
+    color: #fff;
+  }
 .single .entry-content{
 	padding: 50px;
 	background-color: #fff !important;
+}
+.container{
+  width: 80%;
+}
+.product_meta{
+  border: none !important;
 }
 /*
 #site-navigation-wrap{
@@ -56,10 +90,10 @@ body {
 	margin: 10px 0 10px 0 !important;
 }
 
-input[type="file"] {
+/*input[type="file"] {
     display: none;
 }
-
+*/
 .form-file-upload {
     border: 1px solid #ccc;
     display: inline-block;
@@ -264,6 +298,10 @@ input[type="file"] {
 	flex: 1;
 }
 
+.finishes{
+	padding-top: 20px;
+}
+
 .left-area{
 	padding-right: 30px
 }
@@ -384,4 +422,101 @@ li {
 .buttons-flex .button {
     flex: 1;
     padding: 0;
+}
+.product_list_widget{
+	margin: 20px 0 10px 0;
+}
+.banner-products{
+	margin: 5px;
+	background-color: #fff;
+}
+.banner-product-title{
+	text-align: center;
+	border-top: solid 1px lightgrey;
+	padding: 10px;
+	font-size: 1.2em;
+}
+.banner-products:hover{
+	background-color: #50c5dc;
+	text-decoration: none;
+	/*color: #fff;*/
+}
+
+.banner-products a:hover{
+	text-decoration: none;
+	color: #000;
+}
+
+#site-header.medium-header #site-navigation-wrap .dropdown-menu>li>a{
+	padding: 8px;
+	letter-spacing: 0;
+	/*border-right: solid 1px grey;*/
+}
+.single .entry-title{
+  border-bottom: none;
+}
+
+.woocommerce div.product form.cart{
+  border: none !important;
+}
+
+.wccpf-fields-container table th, table td {
+  border-bottom: none;
+}
+
+.wccpf_value input[type=text],
+.wccpf_value input[type=number],
+.wccpf_value input[type=select], textarea {
+  -webkit-transition: all 0.30s ease-in-out !important;
+  -moz-transition: all 0.30s ease-in-out  !important;
+  -ms-transition: all 0.30s ease-in-out !important;
+  -o-transition: all 0.30s ease-in-out !important;
+  outline: none !important;
+  padding: 3px 0px 3px 12px !important;
+  margin: 5px 1px 3px 3px !important;
+  border: 1px solid #DDDDDD !important;
+  border-radius: 5px !important;
+}
+ 
+.wccpf_value select{
+  -webkit-transition: all 0.30s ease-in-out !important;
+  -moz-transition: all 0.30s ease-in-out  !important;
+  -ms-transition: all 0.30s ease-in-out !important;
+  -o-transition: all 0.30s ease-in-out !important;
+  outline: none !important;
+  /*padding: 3px 0px 3px 12px !important;*/
+  margin: 5px 1px 3px 3px !important;
+  border: 1px solid #DDDDDD !important;
+  border-radius: 5px !important;
+}
+
+.wccpf_value input[type=text]:focus,
+.wccpf_value input[type=number]:focus,
+.wccpf_value input[type=select]:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1) !important;
+  padding: 3px 0px 3px 12px !important;
+  margin: 5px 1px 3px 3px !important;
+  border: 1px solid rgba(81, 203, 238, 1) !important;
+}
+
+.wccpf_value input[type=number]::-webkit-inner-spin-button,
+.wccpf_value input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+.wccpf-fields-container table.wccpf_fields_table td{
+  padding: 2px;
+}
+
+.wraper-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wraper-box>* {
+  flex: 1 1 200px;
+}
+
+table.wccpf_fields_table td.wccpf_label, table.wccpf_fields_table td.wccpf_label label {
+  padding: 5px;
+  width: 80px !important;
 }

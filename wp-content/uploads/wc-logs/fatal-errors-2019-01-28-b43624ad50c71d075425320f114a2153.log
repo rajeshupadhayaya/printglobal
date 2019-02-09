@@ -1,0 +1,30 @@
+2019-01-28T18:21:29+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 26
+
+2019-01-28T18:23:05+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 26
+
+2019-01-28T18:23:50+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 26
+
+2019-01-28T18:24:43+00:00 CRITICAL syntax error, unexpected 'isset' (T_ISSET), expecting '(' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 15
+
+2019-01-28T18:24:57+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 31
+
+2019-01-28T18:25:23+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:25:42+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:27:31+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:29:01+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:29:46+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:30:25+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:31:03+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:31:15+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:34:04+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+
+2019-01-28T18:34:31+00:00 CRITICAL Call to a member function get_gallery_image_ids() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\templates\material.php on line 32
+

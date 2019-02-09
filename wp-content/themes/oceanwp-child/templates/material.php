@@ -12,15 +12,30 @@ get_header(); ?>
 			
 
 			<?php
+			if(isset($_GET['type'])){
+				$type = $_GET['type'];
+			}else{
+				$type = '';
+			}
+
 			if(isset($_GET['id']))
 			{
-				$productId = $_GET['id'];
+				$productId = (int)$_GET['id'];
 				$product = wc_get_product( $productId );
 				?>
 				<div class='banner-product-content'>
 					<div class="left-area">
 						<div class="banner-product-image">
-							<?php echo '<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" />'; ?>
+							<?php
+
+							$attachmentIds = $product->get_gallery_image_ids();
+
+				    		if (wp_get_attachment_url($attachmentIds[0])) 
+				    			echo '<img src="'. wp_get_attachment_url($attachmentIds[0]) .'" alt="Placeholder" />'; 	
+				    			
+				    			
+				    		else 
+				    			echo '<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" />'; ?>
 						</div>
 						<div class="finishes">
 							<h3>Finishes for &nbsp;<?php echo $product->get_title(); ?></h3>
@@ -72,23 +87,13 @@ get_header(); ?>
 										</li>
 										<li class="form-item material-scale">
 											<label for="material-scale">Scale</label>
-											<select data-calc-type="material-" name="material-scale" id="material-scale">
+											<select name="material-scale" id="material-scale">
 												<option selected="" value="m">Metres (m)</option>
 												<option value="cm">Centimetres (cm)</option>
 												<option value="mm">Millimetres (mm)</option>
 												<option value="ft">Feet (ft)</option>
 												<option value="in">Inches (in)</option>
 												<option value="pa">Paper Sizes</option>
-											</select>
-										</li>
-										<li class="form-item material-paper material-paper-input" style="display: none;">
-											<label for="material-paper-size">Paper Sizes</label>
-											<select data-calc-type="material-" name="paper-size" id="material-paper-size">
-												<option value="a0" data-width="841" data-height="1189">A0 (841mm × 1189mm)</option>
-												<option value="a1" data-width="594" data-height="841">A1 (594mm × 841mm)</option>
-												<option value="a2" data-width="420" data-height="594">A2 (420mm × 594mm)</option>
-												<option value="a3" data-width="297" data-height="420">A3 (297mm × 420mm)</option>
-												<option value="a4" data-width="210" data-height="297">A4 (210mm × 297mm)</option>
 											</select>
 										</li>
 										<li class="form-item material-quantity calc-quantity">
@@ -133,6 +138,9 @@ get_header(); ?>
 									
 								</form>
 							</div>
+							<div class="product-description">
+								<?php echo $product->post->post_excerpt;?>
+							</div>
 						</div>
 				
 					</div>
@@ -141,30 +149,41 @@ get_header(); ?>
 			} else
 			{
 				?>
-				<ul class="product_list_widget">
+				<div class="product_list_widget">
 				<?php
-				$args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4,'product_cat' => 'banners', 'orderby' =>'date','order' => 'ASC' );
+				$args = array( 'post_type' => 'product', 'stock' => 1, 'posts_per_page' => 4,'product_cat' => $type, 'orderby' =>'date','order' => 'ASC' );
 				$loop = new WP_Query( $args );
 				// print_r($loop);
-				echo '<div class="">';
+				echo '<div class="rows">';
 				if($loop->have_posts()){
 					while ($loop->have_posts()) : $loop->the_post(); global $product;?>
+						<div class="cols" style="max-width: 30%;">
+							<div class="banner-products">
+								<a href="material?id=<?php echo esc_attr(get_the_iD()); ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
+								<div>
+						    	<?php
+									$attachmentIds = $product->get_gallery_image_ids();
 
-						<li><a href="material?id=<?php echo esc_attr(get_the_iD()); ?>" title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
-
-				    	<?php
-
-				    		if (has_post_thumbnail()) 
-				    			the_post_thumbnail('shop_thumbnail'); 
-				    		else 
-				    			echo '<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" />'; ?>
-				    	<li><?php if ( get_the_title() ) the_title(); else the_ID(); ?></li>
-				    	</a>
-				    	<li> <?php echo $product->get_price_html(); ?></li>
+						    		if (wp_get_attachment_url($attachmentIds[0])) 
+						    			echo '<img src="'. wp_get_attachment_url($attachmentIds[0]) .'" alt="Placeholder" />'; 	
+						    			
+						    			
+						    		else 
+						    			echo '<img src="'. woocommerce_placeholder_img_src() .'" alt="Placeholder" />'; ?>
+						    	</div>
+						    	<div class="banner-product-title">
+						    		<?php if ( get_the_title() ) the_title(); else the_ID(); ?><br>
+						    		<?php echo $product->get_description();?><br>
+						    		<div style="text-align: center;"> <?php echo $product->get_price_html(); ?></div>
+						    	</div>	
+						    	</a>
+						    	
+				    		</div>
+				    	</div>
 				    	<?php 
 					endwhile; 
 					?>
-					</ul>
+					</div>
 					<?php
 					echo '</div>';
 				}
