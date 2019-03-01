@@ -21,7 +21,7 @@ Template: oceanwp
   color: #fff;
 }
 .owp-floating-bar{
-  margin-top: 45px;
+  margin-top: 80px;
 }
 .page-header{
 	display: none;
@@ -29,11 +29,45 @@ Template: oceanwp
 
 .woocommerce-products-header{
   min-height: 250px;
-  background-size: contain;
-  background-repeat: no-repeat;
   text-align: right;
-  background-image: url(/wp-content/uploads/2019/02/business-card-header.png);
+  margin-bottom: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
+.banners-header{
+  height: 440px;
+  background-image: url(/wp-content/uploads/2019/02/PJ61ZD11.jpg);
+  
+}
+
+.roller-banners-header{
+  height: 440px;
+  background-image: url(/wp-content/uploads/2019/02/PLW0Q91.jpg);
+  /* background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+.selfie-frames-header{
+  height: 440px;
+  background-image: url(/wp-content/uploads/2019/03/selfi-frammes.jpg);
+}
+
+.shop-header{
+  height: 440px;
+  background-image: url(/wp-content/uploads/2019/02/PLW0Q91.jpg);
+}
+
+.foamex-header{
+  height: 440px;
+  background-image: url(/wp-content/uploads/2019/02/PLW0Q91.jpg);
+}
+
+.correx-boards-header{
+  height: 440px;
+  background-image: url(/wp-content/uploads/2019/02/PLW0Q91.jpg);
+}
+
 .woocommerce .term-description {
     float: right;
     min-height: 80px;
@@ -74,7 +108,7 @@ Template: oceanwp
 	text-decoration: none;
 	color: #ffff;
 }*/
-
+/* 
 .upload-form{
 	
 	margin: auto;
@@ -93,7 +127,7 @@ Template: oceanwp
 /*input[type="file"] {
     display: none;
 }
-*/
+
 .form-file-upload {
     border: 1px solid #ccc;
     display: inline-block;
@@ -277,7 +311,7 @@ Template: oceanwp
   to {
     background-position: -60px -60px;
   }
-}
+} */
 
 .footer-custom-widget h3 {
 	color: #fff;
@@ -289,9 +323,9 @@ Template: oceanwp
 .banner-product-content{
 	
 	display: flex;
-    margin: 20px 0 20px 0;
-    background: #fff;
-    padding: 20px;
+  margin: 20px 0 20px 0;
+  background: #fff;
+  padding: 20px;
 }
 
 .banner-product-content div{
@@ -377,8 +411,6 @@ li {
 .material-quantity{width:30%}
 .material-finish{width:70%}
 .material-action{width:100%}
-
-
 
 .buttons {
     list-style: none;
@@ -519,4 +551,11 @@ li {
 table.wccpf_fields_table td.wccpf_label, table.wccpf_fields_table td.wccpf_label label {
   padding: 5px;
   width: 80px !important;
+}
+
+#footer-bottom #copyright{
+  color: #fff;
+}
+.sf-menu li.menu-item{
+  padding-right: 15px; 
 }

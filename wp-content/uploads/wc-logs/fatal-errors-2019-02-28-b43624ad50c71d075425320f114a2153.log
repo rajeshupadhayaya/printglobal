@@ -1,0 +1,6 @@
+2019-02-28T17:56:09+00:00 CRITICAL Call to undefined method WC_Cart::product_id() in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 194
+
+2019-02-28T17:56:27+00:00 CRITICAL Call to undefined method WC_Cart::product_id() in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 194
+
+2019-02-28T18:02:33+00:00 CRITICAL Call to a member function prepare() on a non-object in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 202
+

@@ -21,6 +21,8 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 // define('DB_NAME', 'prinolvd_printglobal');
+define('WP_CACHE', true);
+define( 'WPCACHEHOME', 'C:\xampp\htdocs\wp-content\plugins\wp-super-cache/' );
 define('DB_NAME', 'printglobal');
 
 /** MySQL database username */
@@ -57,6 +59,16 @@ define('AUTH_SALT',        'jDC|/g#BKmw+[4RZTbDSf<4B/7CoXWzo1bf}kVEW08)C8fQ$88EK
 define('SECURE_AUTH_SALT', '=8Z??9[aId9?9(VZhdJaoo%gqo;=z09VrdzCOuC;=QvRR>M0oJ@ix%|@)kOz*Kf~');
 define('LOGGED_IN_SALT',   'mOR`H;1,LTG0*yfmW/|0k Pt*8=OU&:aL$%YVE`I/z)G?4[^&^4?>|GB V79nPvc');
 define('NONCE_SALT',       'E}u~@Q_*?..{XtNW][5bf?.!6&B*+CBz`Hk]jwJ&&/sD]^zMe/G1d0?GhMEZ<!})');
+
+
+define( 'SMTP_HOST', 'smtp.sendgrid.net' );  // A2 Hosting server name. For example, "a2ss10.a2hosting.com"
+define( 'SMTP_AUTH', true );
+define( 'SMTP_PORT', '587' );
+define( 'SMTP_SECURE', 'ssl' );
+define( 'SMTP_USERNAME', 'info@createonlineexam.com' );  // Username for SMTP authentication
+define( 'SMTP_PASSWORD', 'Mailme@1990' );          // Password for SMTP authentication
+define( 'SMTP_FROM',     'info@printglobal.com' );  // SMTP From address
+define( 'SMTP_FROMNAME', 'Order' );  
 
 /**#@-*/
 

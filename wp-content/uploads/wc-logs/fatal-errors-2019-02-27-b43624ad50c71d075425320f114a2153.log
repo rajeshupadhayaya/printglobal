@@ -1,0 +1,12 @@
+2019-02-27T18:20:19+00:00 CRITICAL syntax error, unexpected ',', expecting ']' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 165
+
+2019-02-27T18:20:45+00:00 CRITICAL syntax error, unexpected ',' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 168
+
+2019-02-27T18:42:23+00:00 CRITICAL syntax error, unexpected ',' in C:\xampp\htdocs\wp-content\themes\oceanwp-child\woocommerce\owp-single-product.php on line 15
+
+2019-02-27T18:52:46+00:00 CRITICAL Cannot use object of type stdClass as array in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 174
+
+2019-02-27T18:52:55+00:00 CRITICAL Cannot use object of type stdClass as array in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 174
+
+2019-02-27T18:53:33+00:00 CRITICAL Call to undefined method stdClass::get() in C:\xampp\htdocs\wp-content\themes\oceanwp-child\functions.php on line 174
+

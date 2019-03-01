@@ -26,7 +26,44 @@ $(function(){ // document ready
       }else{
         $(".upload_design-wrapper").css("display", "none");
       }
-  })
+	})
+	
+	$('select').change(function(){
+		// console.log(elementorFrontendConfig['post']['id']);
+		var id = elementorFrontendConfig['post']['id'];
+		var title = elementorFrontendConfig['post']['title'];
+		var height = $('select[name="height"] option:selected').val() ;
+		var length = $('select[name="length"] option:selected').val() ;
+		// var size = $('select[name="size"] option:selected').val() ;
+		var form_data = new FormData();
+
+    form_data.append('id', id);
+    form_data.append('title', title);
+    form_data.append('height', height);
+    form_data.append('action', 'product_price');
+		form_data.append('length', length);
+		// form_data.append('size', size);
+		
+		if (height !=undefined && length !=undefined)	{
+			$( ".woocommerce-variation-add-to-cart .button, button[name=add-to-cart]" ).addClass( "disabled" );
+			jQuery.ajax({
+				url: '../../wp-admin/admin-ajax.php',
+				type: 'post',
+				contentType: false,
+				processData: false,
+				data: form_data,
+				success: function (response) {
+						console.log(response);
+						$( ".summary.entry-summary .price .woocommerce-Price-amount" ).replaceWith( response );
+						$( ".woocommerce-variation-add-to-cart .button, button[name=add-to-cart]" ).removeClass( "disabled" );
+				},
+				error: function (response) {
+					console.log(response);
+				}
+			});
+		}
+		
+	});
 });
 
 
