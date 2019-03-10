@@ -14,7 +14,7 @@ global $product;
 echo '<div style="display:none" id="product_id">';
 echo $product->get_categories() ;
 echo '</div>';
-// echo $product->get_categories( ', ', ' ' . _n( ' ', '  ', $cat_count, 'woocommerce' ) . ' ', ' ' );
+
 // Loop through elements
 foreach ( $elements as $element ) {
     // echo 'test '.$element;

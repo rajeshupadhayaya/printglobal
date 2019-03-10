@@ -1,0 +1,12 @@
+2019-03-10T08:48:03+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\printglobal\wp-content\themes\oceanwp-child\functions.php on line 224
+
+2019-03-10T08:48:33+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\printglobal\wp-content\themes\oceanwp-child\functions.php on line 225
+
+2019-03-10T08:50:03+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\printglobal\wp-content\themes\oceanwp-child\functions.php on line 218
+
+2019-03-10T08:50:34+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\printglobal\wp-content\themes\oceanwp-child\functions.php on line 218
+
+2019-03-10T08:58:03+00:00 CRITICAL syntax error, unexpected ',' in C:\xampp\htdocs\printglobal\wp-content\themes\oceanwp-child\functions.php on line 229
+
+2019-03-10T09:06:25+00:00 CRITICAL Function name must be a string in C:\xampp\htdocs\printglobal\wp-content\themes\oceanwp-child\functions.php on line 225
+

@@ -68,7 +68,7 @@ Template: oceanwp
   background-image: url(/wp-content/uploads/2019/02/PLW0Q91.jpg);
 }
 
-.woocommerce .term-description {
+.woocommerce .cat-title {
     float: right;
     min-height: 80px;
     margin-top: 20px; 
@@ -91,6 +91,11 @@ Template: oceanwp
 }
 .product_meta{
   border: none !important;
+}
+
+.woocommerce ul.products li.product li.inner{
+  display: none !important;
+
 }
 /*
 #site-navigation-wrap{
@@ -540,13 +545,13 @@ li {
   padding: 2px;
 }
 
-.wraper-box {
+/* .wraper-box {
   display: flex;
   flex-wrap: wrap;
 }
 .wraper-box>* {
   flex: 1 1 200px;
-}
+} */
 
 table.wccpf_fields_table td.wccpf_label, table.wccpf_fields_table td.wccpf_label label {
   padding: 5px;
@@ -558,4 +563,18 @@ table.wccpf_fields_table td.wccpf_label, table.wccpf_fields_table td.wccpf_label
 }
 .sf-menu li.menu-item{
   padding-right: 15px; 
+}
+
+.woocommerce ul.products li.product .button {
+  background-color: #32CD32 !important;
+  color: #fff !important;
+  border-radius: 15px !important;
+}
+
+.woocommerce .term-description{
+  margin-top: 20px;
+  background-color: cyan;
+  padding: 30px 15px;
+  font-size: 1.3em;
+  text-align: justify;
 }

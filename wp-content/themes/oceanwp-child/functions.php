@@ -57,17 +57,27 @@ function extra_footer_widget(){
 		) );
 }
 
-// Replace add to cart button by a linked button to the product in Shop and archives pages
-// add_filter( 'woocommerce_loop_add_to_cart_link', 'replace_loop_add_to_cart_button', 10, 2 );
-// function replace_loop_add_to_cart_button( $button, $product  ) {
-//     // Not needed for variable products
-//     if( $product->is_type( 'variable' ) ) return $button;
+//Replace add to cart button by a linked button to the product in Shop and archives pages
+add_filter( 'woocommerce_loop_add_to_cart_link', 'replace_loop_add_to_cart_button', 10, 2 );
+function replace_loop_add_to_cart_button( $button, $product  ) {
+    // Not needed for variable products
+    if( $product->is_type( 'variable' ) ) return $button;
 
-//     // Button text here
-//     $button_text = __( "View product", "woocommerce" );
+    // Button text here
+    $button_text = __( "View product", "woocommerce" );
 
-//     return '<a class="button" href="' . $product->get_permalink() . '">' . $button_text . '</a>';
-// }
+    return '<a class="button" href="' . $product->get_permalink() . '">' . $button_text . '</a>';
+}
+
+add_filter( 'woocommerce_loop_add_to_cart_link', 'replacing_add_to_cart_button', 10, 2 );
+function replacing_add_to_cart_button( $button, $product  ) {
+	if ( $product->is_type( 'simple' ) ) {
+		$button_text = __("View product", "woocommerce");
+		$button = '<a class="button" href="' . $product->get_permalink() . '">' . 
+		$button_text . '</a>';
+	}
+	return $button;
+}
 
  //custom upload file
 // add_action( 'wp_ajax_upload_file','upload_file' );
@@ -146,17 +156,16 @@ function extra_footer_widget(){
 
 add_action( 'wp_ajax_product_price','product_price' );
 add_action( 'wp_ajax_nopriv_product_price','product_price' );
-/** Get Price logic */
+/** Ajax to get price  */
 function product_price(){
-		//  echo 'test';
+		
    	if(isset($_POST['length']) && isset($_POST['height']) )
    	{
 	
-	  // echo $_FILES["upload"]["name"];
+	  
 	   	$length = $_POST['length'];
-			 $height = $_POST['height'];
-			 $id = $_POST['id'];
-	  	// echo $length,$width;
+			$height = $_POST['height'];
+			$id = $_POST['id'];
 	  	
 			$price = get_product_price($length, $height,$id);
 
@@ -170,31 +179,61 @@ function product_price(){
 	die();
 }
 
+/* Update price in cart */ 
 add_action( 'woocommerce_before_calculate_totals', 'add_custom_price', 20, 1);
 function add_custom_price( $cart_obj ) {
 
     // This is necessary for WC 3.0+
     if ( is_admin() && ! defined( 'DOING_AJAX' ) )
         return;
-		// print_r($cart_obj);
 		
+
     // Avoiding hook repetition (when using price calculations for example)
     if ( did_action( 'woocommerce_before_calculate_totals' ) >= 2 )
-        return;
+				return;
 
-    // Loop through cart items
+		$no_of_design_req = 0;		
+		$already_present = false;
+		$key='';
+		// print("<pre>".print_r($cart_obj,true)."</pre>");
+		// Loop through cart items
+		
     foreach ( $cart_obj->get_cart() as $cart_item ) {
 				// print_r($cart_item);
 				
 				$height = $cart_item['wccpf_height']['user_val'];
 				$length = $cart_item['wccpf_length']['user_val'];
-				print_r($cart_item);
+
 				if($height !='' && $length!=''){
-					// $price = get_product_price($length, $height);
-        	// $cart_item['data']->set_price( $price->price );
+					$price = get_product_price($length, $height,$cart_item['product_id']);
+        	$cart_item['data']->set_price( $price->price );
 				}
-				
-    }
+		
+				$design_option = $cart_item['wccpf_printing_options']['user_val'];
+				// print_r($cart_item);
+				if($design_option == 'Print And Design'){
+					$no_of_design_req += $cart_item['quantity'];
+				}
+
+				if($cart_item['product_id']==963){
+					$already_present = true;
+					$key = $cart_item['key'];
+				}
+		}
+
+		if($already_present == false ){
+			$cart_obj->add_to_cart(963, $no_of_design_req);
+		} else{
+			$cart_data = $cart_obj->get_cart()[$key];
+			$quantity = $cart_data['quantity'];
+			// echo $quantity, $no_of_design_req;
+			if($quantity != $no_of_design_req){
+				$cart_obj->add_to_cart(963, $no_of_design_req - $quantity);
+			}
+		}
+
+		
+
  }
 
  function get_product_price($length, $height,$id){
